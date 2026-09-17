@@ -1,0 +1,48 @@
+version: '3.8'
+
+services:
+  postgres:
+    image: postgres:16-alpine
+    container_name: miraguide-postgres
+    environment:
+      POSTGRES_USER: miraguide
+      POSTGRES_PASSWORD: miraguide
+      POSTGRES_DB: miraguide
+    ports:
+      - "5432:5432"
+    volumes:
+      - postgres_data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U miraguide"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
+
+  backend:
+    build:
+      context: ./backend_new
+      dockerfile: Dockerfile
+    container_name: miraguide-backend
+    environment:
+      - DATABASE_URL=postgresql+asyncpg://miraguide:miraguide@postgres:5432/miraguide
+      - ENVIRONMENT=development
+      - DEBUG=true
+      - DEMO_MODE=true
+      - OPENAI_API_KEY=${OPENAI_API_KEY}
+      - GEMINI_API_KEY=${GEMINI_API_KEY}
+      - ANTHROPIC_API_KEY=${ANTHROPIC_API_KEY}
+    ports:
+      - "8787:8787"
+    depends_on:
+      postgres:
+        condition: service_healthy
+    volumes:
+      - ./backend_new/app:/app/app
+      - ./backend_new/alembic:/app/alembic
+    command: >
+      sh -c "alembic upgrade head && uvicorn app.main:app --host 0.0.0.0 --port 8787 --reload"
+
+  # Frontend will be separate - see frontend/docker-compose.yml
+
+volumes:
+  postgres_data:

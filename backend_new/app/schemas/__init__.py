@@ -1,0 +1,63 @@
+"""Schemas package initialization"""
+
+from app.schemas.base import (
+    BaseSchema,
+    ResponseEnvelope,
+    PaginatedResponse,
+    ErrorResponse,
+    HealthResponse,
+    REQUEST_ID_HEADER,
+    DEMO_MODE_HEADER,
+)
+from app.schemas.ai import (
+    IntentType,
+    ResponseMode,
+    Entity,
+    ImportantInformation,
+    StructuredAIResponse,
+    DecisionEngineResult,
+    AnalyzeImageRequest,
+    AnalyzeDocumentRequest,
+    AnalyzeFormRequest,
+    AskQuestionRequest,
+    SimplifyTextRequest,
+    SummarizeTextRequest,
+    ChatRequest,
+    SessionCreateRequest,
+    SessionResponse,
+    InteractionResponse,
+    TranscribeRequest,
+    SynthesizeRequest,
+    DemoResponse,
+)
+
+__all__ = [
+    # Base
+    "BaseSchema",
+    "ResponseEnvelope",
+    "PaginatedResponse",
+    "ErrorResponse",
+    "HealthResponse",
+    "REQUEST_ID_HEADER",
+    "DEMO_MODE_HEADER",
+    # AI
+    "IntentType",
+    "ResponseMode",
+    "Entity",
+    "ImportantInformation",
+    "StructuredAIResponse",
+    "DecisionEngineResult",
+    "AnalyzeImageRequest",
+    "AnalyzeDocumentRequest",
+    "AnalyzeFormRequest",
+    "AskQuestionRequest",
+    "SimplifyTextRequest",
+    "SummarizeTextRequest",
+    "ChatRequest",
+    "SessionCreateRequest",
+    "SessionResponse",
+    "InteractionResponse",
+    "TranscribeRequest",
+    "SynthesizeRequest",
+    "DemoResponse",
+]
