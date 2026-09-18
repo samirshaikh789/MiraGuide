@@ -248,7 +248,7 @@ Multimodal inputs ko 4-stage pipeline ke zariye action me badalne ka process:
 - **Stage 3 (Intelligence - Core Differentiator):** Intent detection, multimodal reasoning, task interpretation aur safety checks.
 - **Stage 4 (Assistance):** Natural language explanations, simplified instructions, visual highlights aur audio output.
 
-![Detailed AI Processing Architecture][(docs/images/Detailed%20AI%20Processing%20Architecture.png)](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/Detailed%20AI%20Processing%20Architecture.png?raw=true)
+![Detailed AI Processing Architecture](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/Detailed%20AI%20Processing%20Architecture.png?raw=true)
 
 ---
 
@@ -258,7 +258,7 @@ User perspective se application ke interaction ka flow:
 - AI model intent aur context analyze karta hai.
 - **Confidence Check:** Agar confidence high hai, toh direct answer/guidance (text/voice) di jaati hai; agar uncertain hai, toh user se clarification maangi jaati hai, jisse conversation context bana rahe.
 
-![End-to-End User Flowchart][(docs/images/End-to-End%20User%20Flowchart.png)](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/End-to-End%20User%20Flowchart.png?raw=true)
+![End-to-End User Flowchart](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/End-to-End%20User%20Flowchart.png?raw=true)
 
 ---
 
@@ -268,7 +268,7 @@ MiraGuide ka core decision-making aur safety validation framework:
 - **Safety Branch:** Sensitive ya high-risk content detect hone par conservative safe output provide karta hai.
 - **Confidence Verification:** Low-confidence cases me verification loop trigger karta hai taaki galat guidance na di jaye.
 
-![Accessibility Assistance Decision Flow][(docs/images/Accessibility%20Assistance%20Decision%20Flow.png)](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/Accessibility%20Assistance%20Decision%20Flow.png?raw=true)
+![Accessibility Assistance Decision Flow](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/Accessibility%20Assistance%20Decision%20Flow.png?raw=true)
 
 ---
 
@@ -278,7 +278,7 @@ MiraGuide platform ke external services aur data boundaries ka overall overview:
 - **External AI Services:** Multimodal AI Model, OCR Engine, Speech-to-Text aur Text-to-Speech APIs.
 - **Storage:** User preferences, session metadata aur interaction history ka centralized data flow.
 
-![System Context Diagram][(docs/images/System%20Context%20Diagram.png)](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/System%20Context%20Diagram.png?raw=true)
+![System Context Diagram](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/System%20Context%20Diagram.png?raw=true)
 
 ## License
 
