@@ -1,8 +1,8 @@
 # MiraGuide (AccessAI) — Current State Audit
 
 **Date:** 2026-09-17  
-**Auditor:** Lead Engineer  
-**Repository:** C:\Users\hp\Downloads\AI-Powered Smart Assistant\AI-Powered Smart Assistant
+**Auditor:** Samir Shaikh  
+**Repository:** MiraGuide
 
 ---
 

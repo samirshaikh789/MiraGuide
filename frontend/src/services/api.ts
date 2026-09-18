@@ -30,7 +30,13 @@ async function handleResponse<T>(response: Response): Promise<T> {
       errorData.details
     );
   }
-  return response.json();
+  // Backend wraps all responses in ResponseEnvelope { success, data, ... }
+  // Unwrap the .data field to give callers the typed payload directly
+  const envelope = await response.json();
+  if (envelope && typeof envelope === 'object' && 'data' in envelope) {
+    return envelope.data as T;
+  }
+  return envelope as T;
 }
 
 export const api = {
