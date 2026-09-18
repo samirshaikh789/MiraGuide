@@ -225,6 +225,61 @@ MiraGuide itself is built to be accessible:
 - Large interaction targets
 - Screen reader compatible
 
+## System Architecture & Workflows
+
+MiraGuide ke enterprise-grade architecture, multimodal processing pipeline aur decision engine ke technical flowcharts:
+
+---
+
+### 1. High-Level System Architecture
+MiraGuide ka end-to-end layered architecture jo User Interface se lekar Database tak sabhi components ko organize karta hai:
+- **User Interfaces & API Layer:** Mobile/Web apps, API Gateway, Authentication aur Session Management.
+- **Input Processing & AI Intelligence Core:** OCR, Speech-to-Text aur Multimodal Vision-Language Model ke sath Intent Detection aur Confidence Estimation.
+- **Response Generation & Persistence:** TTS, Visual Highlighting, Simplification Engine aur Relational Database (PostgreSQL/SQLite).
+
+![High-Level System Architecture](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/High-Level%20System%20Architecture.png?raw=true)
+
+---
+
+### 2. Detailed AI Processing Architecture
+Multimodal inputs ko 4-stage pipeline ke zariye action me badalne ka process:
+- **Stage 1 (Multimodal Input):** Image, camera frames, screenshots, voice aur text input.
+- **Stage 2 (Perception):** OCR extraction, object detection, document understanding aur STT transcription.
+- **Stage 3 (Intelligence - Core Differentiator):** Intent detection, multimodal reasoning, task interpretation aur safety checks.
+- **Stage 4 (Assistance):** Natural language explanations, simplified instructions, visual highlights aur audio output.
+
+![Detailed AI Processing Architecture][(docs/images/Detailed%20AI%20Processing%20Architecture.png)](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/Detailed%20AI%20Processing%20Architecture.png?raw=true)
+
+---
+
+### 3. End-to-End User Flowchart
+User perspective se application ke interaction ka flow:
+- User mode choose karke input provide karta hai (Camera, Screen, Voice, Text).
+- AI model intent aur context analyze karta hai.
+- **Confidence Check:** Agar confidence high hai, toh direct answer/guidance (text/voice) di jaati hai; agar uncertain hai, toh user se clarification maangi jaati hai, jisse conversation context bana rahe.
+
+![End-to-End User Flowchart][(docs/images/End-to-End%20User%20Flowchart.png)](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/End-to-End%20User%20Flowchart.png?raw=true)
+
+---
+
+### 4. Accessibility Assistance Decision Flow
+MiraGuide ka core decision-making aur safety validation framework:
+- **Accessibility Decision Engine:** User intent aur accessibility needs ko pehchan kar candidate assistance generate karta hai.
+- **Safety Branch:** Sensitive ya high-risk content detect hone par conservative safe output provide karta hai.
+- **Confidence Verification:** Low-confidence cases me verification loop trigger karta hai taaki galat guidance na di jaye.
+
+![Accessibility Assistance Decision Flow][(docs/images/Accessibility%20Assistance%20Decision%20Flow.png)](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/Accessibility%20Assistance%20Decision%20Flow.png?raw=true)
+
+---
+
+### 5. System Context Diagram
+MiraGuide platform ke external services aur data boundaries ka overall overview:
+- **Input Channels:** Camera, microphone, screenshot aur text inputs.
+- **External AI Services:** Multimodal AI Model, OCR Engine, Speech-to-Text aur Text-to-Speech APIs.
+- **Storage:** User preferences, session metadata aur interaction history ka centralized data flow.
+
+![System Context Diagram][(docs/images/System%20Context%20Diagram.png)](https://github.com/samirshaikh789/MiraGuide/blob/main/Images/System%20Context%20Diagram.png?raw=true)
+
 ## License
 
 Proprietary — MiraGuide Project
